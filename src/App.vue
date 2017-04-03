@@ -52,14 +52,16 @@ export default {
 	  Display
   },
   mounted(){
-	  $(() => {
-		  let stage = $('#stage')
-		  if(stage.width() <= 100){
-			stage.css('min-height', '540px')
-		  }else{
-		  	stage.css('min-height', `${stage.width()}px`)
-		  }
-		  this.res = stage.width()
+	  let stage = $('#stage')
+
+	  _.debounce(() => {
+		console.log(stage.width())
+		stage.css('min-height', `${stage.width()}px`)
+		this.res = stage.width()
+	  }, 250)()
+
+	  this.$nextTick(() => {
+		  
 	  })
   },
   methods: {
@@ -72,6 +74,7 @@ export default {
 	  },
 	  next(){
 		  this.step += 1;
+		  console.log($(this.$refs.stage).width())
 	  },
 	  setHeight(width){
 			stage.css('min-height', `${width}px`)
@@ -80,11 +83,11 @@ export default {
   },
   computed: {
 	  widthOfMagic(){
-		  return $('#stage').width()
+		  return $(this.$refs.stage).width()
 	  }
   },
   watch: {
-	  widthOfMagic(){
+	  stage: () => {
 		  console.log('It\'s change :', this.widthOfMagic)
 		this.setHeight(this.widthOfMagic)
 	  }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 import '!script-loader!jquery/dist/jquery.min.js'
+import '!script-loader!lodash/lodash.min'
 import '!script-loader!bootstrap/dist/js/bootstrap.min'
 import '!script-loader!croppie/croppie.min'
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css'
