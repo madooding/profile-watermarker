@@ -54,7 +54,11 @@ export default {
   mounted(){
 	  this.$nextTick(() => {
 		  let stage = $('#stage')
-		  stage.css('min-height', `${stage.width()}px`)
+		  if(stage.width() <= 100){
+			  stage.css('min-height', '540px')
+		  }else{
+		  	stage.css('min-height', `${stage.width()}px`)
+		  }
 		  this.res = stage.width()
 	  })
   },
