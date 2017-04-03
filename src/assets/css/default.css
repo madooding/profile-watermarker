@@ -1,0 +1,77 @@
+/* A Custom CSS Powered by @madooding */
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,600');
+
+
+body {
+    font-family: 'Kanit', 'Helvetica';
+    background: url('../images/bg.png');
+    background-repeat: repeat;
+    background-size: 8%;
+    background-color: #37466a;
+    background-attachment: fixed;
+}
+
+#app {
+    background: rgba(0,0,0,0);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 17%, rgba(0,0,0,0.43) 100%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+div.main {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background-color: rgba(255,255,255,.9);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.main div.custom.header {
+    height: 120px;
+    margin-top: 10px;
+}
+
+.main div.custom.header div {
+    height: 100%;
+}
+
+.main div.custom.header > div.brand {
+    align-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+div.custom.header > div.brand > img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+div.custom.header > div.head-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.custom.header > div.head-text > h2 {
+    font-size: 26px;
+    color: #373737;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+
+
+hr {
+    height: 1px;
+    background-color: #d6d6d6;
+}
