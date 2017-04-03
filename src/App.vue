@@ -53,7 +53,7 @@ export default {
   },
   mounted(){
 	  this.$nextTick(() => {
-		  let stage = $(this.$refs.stage)
+		  let stage = $('#stage')
 		  stage.css('min-height', `${stage.width()}px`)
 		  this.res = stage.width()
 	  })
@@ -76,11 +76,12 @@ export default {
   },
   computed: {
 	  widthOfMagic(){
-		  return $(this.$refs.stage).width()
+		  return $('#stage').width()
 	  }
   },
   watch: {
 	  widthOfMagic(){
+		  console.log('It\'s change :', this.widthOfMagic)
 		this.setHeight(this.widthOfMagic)
 	  }
   }
