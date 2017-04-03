@@ -81,7 +81,7 @@ export default {
   },
   watch: {
 	  widthOfMagic(){
-
+		this.setHeight(this.widthOfMagic)
 	  }
   }
 }
