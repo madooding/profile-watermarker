@@ -11,10 +11,14 @@
             <div class="row">
                 <div class="col-xs-12">
                     <p class="text-center">เซฟรูปไปเปลี่ยนเป็นรูปโปรไฟล์ได้เลย</p>
+                    <p class="text-center">บนมือถือแนะนำให้เปิดเว็บนอกแอพ Facebook, Messenger นะครับ เช่น Chrome, Safari</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
+            <div class="row" v-if="pngUrl">
+                <div class="col-sm-6 col-sm-push-6 col-xs-12">
+                    <button class="btn btn-primary btn-lg btn-block" @click="wakeupDownload">ดาวน์โหลด</button>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-xs-12">
                     <button class="btn btn-default btn-lg btn-block" @click="reset">เลือกรูปภาพใหม่</button>
                 </div>
             </div>
@@ -28,6 +32,9 @@
 <script>
 export default {
     props: ['result'],
+    data: () => ({
+        pngUrl: ''
+    }),
     mounted(){
         let canvas = document.getElementById('result-canvas')
         let ctx = canvas.getContext('2d')
@@ -47,12 +54,15 @@ export default {
             pngUrl = canvas.toDataURL("image/png")
             $('#result-img').attr('src', pngUrl)
             $(this.$refs.downloadlink).attr('href', pngUrl).attr('download', 'Strong(LYC2017).png')
-            download(pngUrl)
+            this.pngUrl = pngUrl
         }
     },
     methods: {
         reset(){
             this.$emit('reset')
+        },
+        wakeupDownload(){
+            download(this.pngUrl)
         }
     }
 }
