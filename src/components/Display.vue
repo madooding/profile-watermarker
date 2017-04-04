@@ -16,7 +16,7 @@
             </div>
             <div class="row" v-if="pngUrl">
                 <div class="col-sm-6 col-sm-push-6 col-xs-12">
-                    <button class="btn btn-primary btn-lg btn-block" @click="wakeupDownload">ดาวน์โหลด</button>
+                    <button class="btn btn-primary btn-lg btn-block" @click="wakeupDownload">กดปุ่มนี้ถ้าเซฟไม่ได้</button>
                 </div>
                 <div class="col-sm-6 col-sm-pull-6 col-xs-12">
                     <button class="btn btn-default btn-lg btn-block" @click="reset">เลือกรูปภาพใหม่</button>
