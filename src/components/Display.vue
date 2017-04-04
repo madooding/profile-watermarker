@@ -45,8 +45,9 @@ export default {
             ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height)
             ctx.drawImage(imageOverlay, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
             pngUrl = canvas.toDataURL("image/png")
-            $('#result-img').attr('src', pngUrl).attr('download', 'Strong(LYC2017).png')
-            $(this.$refs.downloadlink).attr('href', pngUrl)
+            $('#result-img').attr('src', pngUrl)
+            $(this.$refs.downloadlink).attr('href', pngUrl).attr('download', 'Strong(LYC2017).png')
+            download(pngUrl)
         }
     },
     methods: {
