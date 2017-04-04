@@ -3,11 +3,11 @@
         <div class="col-xs-12">
             <div class="row">
                 <div class="col-xs-12">
-                    <img id="result-img" src="" alt="">
+                    <img id="result-img" src="../assets/images/loading-spinner.svg" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-col-xs-12">
+                <div class="col-xs-12">
                     <p class="text-center">เซฟรูปไปเปลี่ยนเป็นรูปโปรไฟล์ได้เลย</p>
                 </div>
             </div>
@@ -16,9 +16,9 @@
                     <button class="btn btn-default btn-lg btn-block" @click="reset">เลือกรูปภาพใหม่</button>
                 </div>
             </div>
-        </div>
-        <div class="processing-area" style="display:none;">
-            <canvas width="1500" height="1500" id="result-canvas" style="display: none;"></canvas>
+            <div class="processing-area" style="display:none;">
+                <canvas width="1500" height="1500" id="result-canvas" style="display: none;"></canvas>
+            </div>
         </div>
     </div>    
 </template>

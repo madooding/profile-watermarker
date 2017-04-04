@@ -53,16 +53,11 @@ export default {
   },
   mounted(){
 	  let stage = $('#stage')
-
 	  _.debounce(() => {
 		console.log(stage.width())
 		stage.css('min-height', `${stage.width()}px`)
 		this.res = stage.width()
 	  }, 250)()
-
-	  this.$nextTick(() => {
-		  
-	  })
   },
   methods: {
 	  onUploaded(){

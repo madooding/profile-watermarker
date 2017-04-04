@@ -14,11 +14,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-6">
-                    <button class="btn btn-default btn-lg btn-block" @click="reset">ย้อนกลับ</button>
-                </div>
-                <div class="col-xs-6">
+                <div class="col-sm-6 col-sm-push-6 col-xs-12">
                     <button class="btn btn-primary btn-lg btn-block" @click="edited">แก้ไขเสร็จสิ้น</button>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+                    <button class="btn btn-default btn-lg btn-block" @click="reset">เลือกรูปภาพใหม่</button>
                 </div>
             </div>
         </div>
