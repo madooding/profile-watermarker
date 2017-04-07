@@ -3,9 +3,7 @@
         <div class="col-xs-12">
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="" ref="downloadlink">
-                        <img id="result-img" src="../assets/images/loading-spinner.svg" alt="">
-                    </a>
+                    <img id="result-img" src="../assets/images/loading-spinner.svg" alt="">
                 </div>
             </div>
             <div class="row">
@@ -53,7 +51,6 @@ export default {
             ctx.drawImage(imageOverlay, 0, 0, image.width, image.height, 0, 0, image.width, image.height);
             pngUrl = canvas.toDataURL("image/png")
             $('#result-img').attr('src', pngUrl)
-            $(this.$refs.downloadlink).attr('href', pngUrl).attr('download', 'Strong(LYC2017).png')
             this.pngUrl = pngUrl
         }
     },
