@@ -2,6 +2,9 @@
 
 > just crop and add watermark to profile image
 
+## Demo
+[Demo](https://strong.madooding.com/)
+
 ## Build Setup
 
 ``` bash
